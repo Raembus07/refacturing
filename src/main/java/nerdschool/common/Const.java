@@ -16,6 +16,10 @@ package nerdschool.common;
 
 public class Const {
 
+  private Const(){
+
+  }
+
   public static final int RUM_PRICE = 65;
   public static final int GIN_PRICE = 85;
   public static final int GINGER_PRICE = 25;
