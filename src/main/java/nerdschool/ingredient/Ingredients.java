@@ -15,5 +15,6 @@
 package nerdschool.ingredient;
 
 public interface Ingredients {
+
   int getPrice();
 }

@@ -14,10 +14,12 @@
  */
 package nerdschool.ingredient;
 
+import nerdschool.common.Const;
+
 public class IngredientWhisky implements Ingredients {
 
   @Override
   public int getPrice() {
-    return 150;
+    return Const.WHISKY_PRICE;
   }
 }
