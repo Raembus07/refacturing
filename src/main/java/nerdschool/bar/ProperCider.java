@@ -14,11 +14,15 @@
  */
 package nerdschool.bar;
 
+import nerdschool.ingredient.IngredientProperCider;
+
 public class ProperCider extends Drink {
+
+  IngredientProperCider ingredientProperCider = new IngredientProperCider();
 
   @Override
   public int getPrice() {
-    return 110;
+    return ingredientProperCider.getPrice();
   }
 
   @Override

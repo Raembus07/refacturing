@@ -14,10 +14,21 @@
  */
 package nerdschool.bar;
 
-public class BacardiSpecial extends Drink{
+import nerdschool.ingredient.Gin;
+import nerdschool.ingredient.Grenadine;
+import nerdschool.ingredient.LimeJuice;
+import nerdschool.ingredient.Rum;
+
+public class BacardiSpecial extends Drink {
+
+  Gin gin = new Gin();
+  Rum rum = new Rum();
+  Grenadine grenadine = new Grenadine();
+  LimeJuice limeJuice = new LimeJuice();
+
   @Override
   public int getPrice() {
-    return 85 / 2 + 65 + 10 + 10;
+    return gin.getPrice() / 2 + rum.getPrice() + grenadine.getPrice() + limeJuice.getPrice();
   }
 
   @Override

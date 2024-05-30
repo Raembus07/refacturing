@@ -14,11 +14,15 @@
  */
 package nerdschool.bar;
 
+import nerdschool.ingredient.IngredientWhisky;
+
 public class Whiskey extends Drink {
+
+  IngredientWhisky ingredientWhiskey = new IngredientWhisky();
 
   @Override
   public int getPrice() {
-    return 150;
+    return ingredientWhiskey.getPrice();
   }
 
   @Override

@@ -14,11 +14,17 @@
  */
 package nerdschool.bar;
 
+import nerdschool.ingredient.Gin;
+import nerdschool.ingredient.Ginger;
+
 public class GinGinger extends Drink {
+
+  Gin gin = new Gin();
+  Ginger ginger = new Ginger();
 
   @Override
   public int getPrice() {
-    return (int) (85 * 1.5 + 25);
+    return (int) (gin.getPrice() * 1.5 + ginger.getPrice());
   }
 
   @Override

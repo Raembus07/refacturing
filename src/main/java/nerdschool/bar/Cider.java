@@ -14,11 +14,15 @@
  */
 package nerdschool.bar;
 
+import nerdschool.ingredient.OneCider;
+
 public class Cider extends Drink {
+
+  OneCider oneCider = new OneCider();
 
   @Override
   public int getPrice() {
-    return 103;
+    return oneCider.getPrice();
   }
 
   @Override

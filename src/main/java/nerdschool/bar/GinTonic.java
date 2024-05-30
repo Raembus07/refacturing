@@ -14,11 +14,19 @@
  */
 package nerdschool.bar;
 
+import nerdschool.ingredient.Gin;
+import nerdschool.ingredient.GreenStuff;
+import nerdschool.ingredient.TonicWater;
+
 public class GinTonic extends Drink {
+
+  Gin gin = new Gin();
+  TonicWater tonicWater = new TonicWater();
+  GreenStuff greenStuff = new GreenStuff();
 
   @Override
   public int getPrice() {
-    return 85 + 10 + 20;
+    return gin.getPrice() + tonicWater.getPrice() + greenStuff.getPrice();
   }
 
   @Override
