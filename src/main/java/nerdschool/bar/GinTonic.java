@@ -18,7 +18,7 @@ import nerdschool.ingredient.Gin;
 import nerdschool.ingredient.GreenStuff;
 import nerdschool.ingredient.TonicWater;
 
-public class GinTonic extends Drink {
+public class GinTonic implements Drink {
 
   Gin gin = new Gin();
   TonicWater tonicWater = new TonicWater();

@@ -14,7 +14,7 @@
  */
 package nerdschool.ingredient;
 
-public class TonicWater extends Ingredients {
+public class TonicWater implements Ingredients {
 
   @Override
   public int getPrice() {

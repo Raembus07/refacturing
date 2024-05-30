@@ -14,7 +14,7 @@
  */
 package nerdschool.ingredient;
 
-public class IngredientWhisky extends Ingredients{
+public class IngredientWhisky implements Ingredients {
 
   @Override
   public int getPrice() {

@@ -14,8 +14,8 @@
  */
 package nerdschool.bar;
 
-public abstract class Drink {
-  public abstract int getPrice();
-  public abstract boolean isEligibleForStudentDiscount();
-  public abstract int getMaxAmount();
+public interface Drink {
+  int getPrice();
+  boolean isEligibleForStudentDiscount();
+  int getMaxAmount();
 }

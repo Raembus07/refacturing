@@ -17,7 +17,7 @@ package nerdschool.bar;
 import nerdschool.ingredient.Gin;
 import nerdschool.ingredient.Ginger;
 
-public class GinGinger extends Drink {
+public class GinGinger implements Drink {
 
   Gin gin = new Gin();
   Ginger ginger = new Ginger();

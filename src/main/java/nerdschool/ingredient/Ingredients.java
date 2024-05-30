@@ -14,6 +14,6 @@
  */
 package nerdschool.ingredient;
 
-public abstract class Ingredients {
-  public abstract int getPrice();
+public interface Ingredients {
+  int getPrice();
 }

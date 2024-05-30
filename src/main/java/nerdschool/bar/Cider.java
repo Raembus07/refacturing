@@ -16,7 +16,7 @@ package nerdschool.bar;
 
 import nerdschool.ingredient.OneCider;
 
-public class Cider extends Drink {
+public class Cider implements Drink {
 
   OneCider oneCider = new OneCider();
 

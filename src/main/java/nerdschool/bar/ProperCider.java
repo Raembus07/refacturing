@@ -16,7 +16,7 @@ package nerdschool.bar;
 
 import nerdschool.ingredient.IngredientProperCider;
 
-public class ProperCider extends Drink {
+public class ProperCider implements Drink {
 
   IngredientProperCider ingredientProperCider = new IngredientProperCider();
 

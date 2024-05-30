@@ -16,7 +16,7 @@ package nerdschool.bar;
 
 import nerdschool.ingredient.IngredientWhisky;
 
-public class Whiskey extends Drink {
+public class Whiskey implements Drink {
 
   IngredientWhisky ingredientWhiskey = new IngredientWhisky();
 

@@ -14,7 +14,7 @@
  */
 package nerdschool.ingredient;
 
-public class Ginger extends Ingredients{
+public class Ginger implements Ingredients {
 
   @Override
   public int getPrice() {

@@ -19,7 +19,7 @@ import nerdschool.ingredient.Grenadine;
 import nerdschool.ingredient.LimeJuice;
 import nerdschool.ingredient.Rum;
 
-public class BacardiSpecial extends Drink {
+public class BacardiSpecial implements Drink {
 
   Gin gin = new Gin();
   Rum rum = new Rum();

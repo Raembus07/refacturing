@@ -14,7 +14,7 @@
  */
 package nerdschool.ingredient;
 
-public class IngredientProperCider extends Ingredients{
+public class IngredientProperCider implements Ingredients {
 
   @Override
   public int getPrice() {
