@@ -6,7 +6,9 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("Pub spec")
 public class PubPricesTest {
@@ -81,6 +83,13 @@ public class PubPricesTest {
     assertEquals(152, actualPrice);
   }
 
+  @Test
+  @DisplayName("Is gin_ginger eligible for student discount?")
+  public void testGinGingerIsNotEligibleForStudentDiscount(){
+    Drink ginGinger = new GinGinger();
+    assertEquals(true, ginGinger.isEligibleForStudentDiscount());
+  }
+
   @Nested
   @DisplayName("Given a customer who is a student")
   class Students {
@@ -111,6 +120,42 @@ public class PubPricesTest {
   @DisplayName("When they order a drink which is not on the menu, then they are refused.")
   public void testThatADrinkNotInTheSortimentGivesError() throws Exception {
     assertThrows(RuntimeException.class, () -> pub.computeCost("sanfranciscosling", false, 1));
+  }
+
+  @Test
+  void getPrice() {
+    BacardiSpecial bacardiSpecial = new BacardiSpecial();
+    assertEquals(85 / 2 + 65 + 10 + 10, bacardiSpecial.getPrice());
+  }
+
+  @Test
+  void isEligibleForStudentDiscount() {
+    BacardiSpecial bacardiSpecial = new BacardiSpecial();
+    assertFalse(bacardiSpecial.isEligibleForStudentDiscount());
+  }
+
+  @Test
+  void getMaxAmount() {
+    BacardiSpecial bacardiSpecial = new BacardiSpecial();
+    assertEquals(2, bacardiSpecial.getMaxAmount());
+  }
+
+  @Test
+  void testCiderIsEligibleForStudentDiscount() {
+    Cider cider = new Cider();
+    assertTrue(cider.isEligibleForStudentDiscount());
+  }
+
+  @Test
+  void testWhiskeyIsNotEligibleForStudentDiscount() {
+    Whiskey whiskey = new Whiskey();
+    assertFalse(whiskey.isEligibleForStudentDiscount());
+  }
+
+  @Test
+  void testProperCiderIsEligibleForStudentDiscount() {
+    ProperCider properCider = new ProperCider();
+    assertTrue(properCider.isEligibleForStudentDiscount());
   }
 
   @Nested
